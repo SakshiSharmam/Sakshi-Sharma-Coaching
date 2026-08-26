@@ -1,0 +1,43 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#17352d;--green:#2e6b59;--mint:#e9f3ed;--cream:#fbfaf5;--gold:#c79545;--white:#fff;--muted:#68756f}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--ink);background:var(--cream);line-height:1.7}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;position:sticky;top:0;background:rgba(251,250,245,.94);backdrop-filter:blur(12px);z-index:20;border-bottom:1px solid #e8e6dc}
+.brand{font-family:'Playfair Display',serif;font-size:1.45rem;color:var(--ink);text-decoration:none}
+.nav nav{display:flex;gap:30px}
+.nav nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:.92rem}
+.menu{display:none;border:0;background:none;font-size:1.5rem}
+.hero{min-height:calc(100vh - 76px);padding:8% 9%;display:grid;grid-template-columns:1.3fr .7fr;gap:7%;align-items:center;background:radial-gradient(circle at 85% 20%,#dceee4 0,transparent 30%),var(--cream)}
+.eyebrow{letter-spacing:.14em;font-size:.72rem;font-weight:700;color:var(--green)}
+h1,h2{font-family:'Playfair Display',serif;line-height:1.12}
+h1{font-size:clamp(3rem,7vw,6.4rem);margin:18px 0}
+h1 em{color:var(--green);font-style:normal}
+.lead{font-size:1.18rem;max-width:650px;color:var(--muted)}
+.buttons,.contact-buttons{display:flex;gap:14px;flex-wrap:wrap;margin:30px 0}
+.btn{display:inline-block;padding:13px 21px;border-radius:999px;text-decoration:none;font-weight:700;transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:var(--green);color:white}
+.secondary{border:1px solid var(--green);color:var(--green)}
+.light{background:white;color:var(--ink)}
+.tagline{font-weight:600;color:var(--gold)}
+.hero-card{background:white;border-radius:28px;padding:40px 30px;text-align:center;box-shadow:0 20px 60px rgba(23,53,45,.12);border:1px solid #e6e9e3}
+.circle{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;margin:0 auto 25px;background:var(--mint);color:var(--green);font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:bold;border:8px solid white;box-shadow:0 0 0 1px #d5e3db}
+.hero-card h2{font-size:1.8rem}.hero-card p{color:var(--muted)}
+.mini-list{display:grid;gap:8px;text-align:left;margin-top:24px;padding-top:20px;border-top:1px solid #edf0ec;font-size:.92rem}
+.intro{max-width:850px;margin:auto;padding:110px 7%;text-align:center}
+.intro h2,.section-heading h2,.benefits h2,.cta h2{font-size:clamp(2.3rem,4vw,4rem);margin:12px 0 22px}
+.intro p{color:var(--muted);margin:12px auto;max-width:760px}
+.section{padding:90px 7%;background:white}.section-heading{text-align:center;margin-bottom:45px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1150px;margin:auto}
+.card{padding:30px;border:1px solid #e4e9e5;border-radius:20px;background:var(--cream);transition:.2s}
+.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(23,53,45,.08)}
+.icon{font-size:2rem;margin-bottom:15px}.card h3{font-size:1.2rem;margin-bottom:8px}.card p{color:var(--muted);font-size:.95rem}
+.benefits{padding:100px 9%;display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;align-items:start;background:var(--mint)}
+.benefits ul{display:grid;grid-template-columns:1fr 1fr;gap:15px 35px;list-style:none}
+.benefits li:before{content:'✓';font-weight:bold;color:var(--green);margin-right:10px}
+.quote{padding:100px 9%;text-align:center;background:var(--ink);color:white}.quote div{font-family:Georgia;font-size:5rem;color:#9cc7b1;line-height:.6}.quote p{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3vw,3rem);max-width:950px;margin:auto;line-height:1.35}
+.cta{text-align:center;padding:100px 7%;background:linear-gradient(135deg,#f3efe3,#e4f0e8)}
+.cta p{color:var(--muted)}.contact-buttons{justify-content:center}.email{font-size:.9rem}
+footer{padding:28px 7%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#102a23;color:#dce8e2;font-size:.85rem}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:60px}.hero-card{max-width:500px}.cards{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr}.nav nav{display:none}.menu{display:block}}
+@media(max-width:560px){.cards{grid-template-columns:1fr}.benefits ul{grid-template-columns:1fr}.nav{padding:0 5%}h1{font-size:3.2rem}.hero,.section,.benefits,.cta{padding-left:6%;padding-right:6%}}
